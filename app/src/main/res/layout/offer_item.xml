@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_10sdp"
+    app:cardBackgroundColor="#fff"
+    app:cardCornerRadius="@dimen/_10sdp"
+    app:cardElevation="2dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/UserMvInOfferItem"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_centerHorizontal="true"
+            android:elevation="4dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:src="@drawable/ridaz"
+            app:civ_border_color="@color/blue_700"
+            app:civ_border_width="2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias=".04"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0" />
+
+        <TextView
+            android:id="@+id/UserNameTvInOfferItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nome"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/UserMvInOfferItem"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias=".03"
+            app:layout_constraintStart_toEndOf="@+id/UserMvInOfferItem"
+            app:layout_constraintTop_toTopOf="@+id/UserMvInOfferItem"
+            app:layout_constraintVertical_bias="0" />
+
+        <RatingBar
+            android:id="@+id/ratingBarInHeader"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="1"
+            android:progressTint="#FFEB3B"
+            android:rating="1"
+            app:layout_constraintBottom_toBottomOf="@+id/UserMvInOfferItem"
+            app:layout_constraintEnd_toEndOf="@+id/UserNameTvInOfferItem"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="@+id/UserNameTvInOfferItem"
+            app:layout_constraintTop_toBottomOf="@+id/UserNameTvInOfferItem" />
+
+
+        <TextView
+            android:id="@+id/UserRatingNumberTvInOfferItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5/5 - 2Avis"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/ratingBarInHeader"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias=".02"
+            app:layout_constraintStart_toEndOf="@+id/ratingBarInHeader"
+            app:layout_constraintTop_toTopOf="@+id/ratingBarInHeader" />
+
+        <TextView
+            android:id="@+id/NumberKiloAndPrisTvInOfferItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="56656"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/UserNameTvInOfferItem"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias=".7"
+            app:layout_constraintStart_toEndOf="@+id/UserRatingNumberTvInOfferItem"
+            app:layout_constraintTop_toTopOf="@+id/UserNameTvInOfferItem" />
+
+        <TextView
+            android:id="@+id/KilosTvInOfferItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" kilos"
+            android:textColor="@color/blue_700"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="@+id/NumberKiloAndPrisTvInOfferItem"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toEndOf="@+id/NumberKiloAndPrisTvInOfferItem"
+            app:layout_constraintTop_toTopOf="@+id/NumberKiloAndPrisTvInOfferItem" />
+
+        <TextView
+            android:id="@+id/PrisTvInOfferItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/UserRatingNumberTvInOfferItem"
+            app:layout_constraintEnd_toStartOf="@+id/PerKiloAndPrisTvInOfferItem"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintStart_toEndOf="@+id/UserRatingNumberTvInOfferItem"
+            app:layout_constraintTop_toBottomOf="@+id/NumberKiloAndPrisTvInOfferItem" />
+
+        <TextView
+            android:id="@+id/PerKiloAndPrisTvInOfferItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" dh/1kilos"
+            android:textColor="@color/blue_700"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="@+id/PrisTvInOfferItem"
+            app:layout_constraintEnd_toEndOf="@+id/KilosTvInOfferItem"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintStart_toStartOf="@+id/PrisTvInOfferItem"
+            app:layout_constraintTop_toTopOf="@+id/PrisTvInOfferItem" />
+
+        <View
+            android:id="@+id/view0"
+            android:layout_width="1dp"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@color/yellow_200"
+            app:layout_constraintBottom_toTopOf="@+id/view1"
+            app:layout_constraintEnd_toStartOf="@+id/PrisTvInOfferItem"
+            app:layout_constraintStart_toEndOf="@+id/UserRatingNumberTvInOfferItem"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="@dimen/_220sdp"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@color/yellow_200"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.493"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/UserMvInOfferItem"
+            app:layout_constraintVertical_bias="0" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="@dimen/_60sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="@dimen/_10sdp"
+            app:layout_constraintHorizontal_bias=".05"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view1"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintVertical_bias="0"
+            app:srcCompat="@drawable/direction" />
+
+        <TextView
+            android:id="@+id/VilleDepartTvInOfferItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Casablanca"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias=".05"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="@+id/imageView"
+            app:layout_constraintVertical_bias="0" />
+
+        <TextView
+            android:id="@+id/VilleArriverTvInOfferItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Khouribga"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias=".05"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/VilleDepartTvInOfferItem"
+            app:layout_constraintVertical_bias="1" />
+
+        <TextView
+            android:id="@+id/DateDepartTvInOfferItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="mer.28/04 à 09h42"
+            android:textSize="@dimen/_11sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/VilleDepartTvInOfferItem"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias=".8"
+            app:layout_constraintStart_toEndOf="@+id/VilleDepartTvInOfferItem"
+            app:layout_constraintTop_toTopOf="@+id/VilleDepartTvInOfferItem" />
+
+        <TextView
+            android:id="@+id/DateArriverTvInOfferItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="mer.28/04 à 21h42"
+            android:textSize="@dimen/_11sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/VilleArriverTvInOfferItem"
+            app:layout_constraintEnd_toEndOf="@+id/DateDepartTvInOfferItem"
+            app:layout_constraintStart_toStartOf="@+id/DateDepartTvInOfferItem"
+            app:layout_constraintTop_toTopOf="@+id/VilleArriverTvInOfferItem" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="@dimen/_220sdp"
+            android:layout_height="1dp"
+            android:background="@color/blue_700"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/VilleArriverTvInOfferItem"
+            app:layout_constraintVertical_bias=".2" />
+
+        <ImageView
+            android:id="@+id/StopIconInOfferItem"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/view2"
+            app:srcCompat="@drawable/ic_stope" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/ListVilleStopeInOfferItem"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/StopIconInOfferItem"
+            app:layout_constraintEnd_toEndOf="@+id/DateArriverTvInOfferItem"
+            app:layout_constraintStart_toEndOf="@+id/StopIconInOfferItem"
+            app:layout_constraintTop_toTopOf="@+id/StopIconInOfferItem" />
+
+
+        <ImageView
+            android:id="@+id/directRsIconInOfferItem"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_25sdp"
+            app:layout_constraintHorizontal_bias=".9"
+            app:layout_constraintBottom_toBottomOf="@+id/NumberKiloAndPrisTvInOfferItem"
+            app:layout_constraintEnd_toStartOf="@+id/NumberKiloAndPrisTvInOfferItem"
+            app:layout_constraintStart_toEndOf="@+id/view0"
+            app:layout_constraintTop_toTopOf="@+id/view0"
+            app:srcCompat="@drawable/ic_lightning" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>

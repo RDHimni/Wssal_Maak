@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:fillViewport="true"
+        tools:context=".ui.updateprofile.personne.PersonneFragment">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profileImageInProfileUpdate"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_80sdp"
+                android:layout_centerHorizontal="true"
+                android:elevation="@dimen/_2sdp"
+                android:src="@mipmap/ic_avatar"
+                app:civ_border_color="@color/yellow_200"
+                app:civ_border_width="1dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias=".06" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/TextInputLayoutUserNameInProfileUpdate"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="wrap_content"
+                android:hint="@string/nome_edittxt"
+                app:endIconMode="clear_text"
+                app:helperText="@string/nome_edittxt"
+                app:helperTextEnabled="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias=".1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profileImageInProfileUpdate"
+                app:layout_constraintVertical_bias=".06">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextUserNameInProfileUpdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/TextInputLayoutUserFamilyNameInProfileUpdate"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="wrap_content"
+                android:hint="@string/prenome_edittxt"
+                app:endIconMode="clear_text"
+                app:helperText="@string/prenome_edittxt"
+                app:helperTextEnabled="true"
+                app:layout_constraintBottom_toBottomOf="@+id/TextInputLayoutUserNameInProfileUpdate"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias=".7"
+                app:layout_constraintStart_toEndOf="@+id/TextInputLayoutUserNameInProfileUpdate"
+                app:layout_constraintTop_toTopOf="@+id/TextInputLayoutUserNameInProfileUpdate">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextUserFamilyNameInProfileUpdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionGo"
+                    android:singleLine="true" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/DateBtnInProfileUpdate"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#737373"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="@+id/TextInputLayoutUserNameInProfileUpdate"
+                app:layout_constraintTop_toBottomOf="@+id/TextInputLayoutUserNameInProfileUpdate"
+                app:layout_constraintVertical_bias=".06" />
+
+            <RadioGroup
+                android:id="@+id/sexeTypeGroupInProfileUpdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="@+id/TextInputLayoutUserFamilyNameInProfileUpdate"
+                app:layout_constraintTop_toTopOf="@+id/DateBtnInProfileUpdate"
+                app:layout_constraintVertical_bias="0">
+
+                <RadioButton
+                    android:id="@+id/radioManBtnInProfileUpdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Homme" />
+
+                <RadioButton
+                    android:id="@+id/radioWomanBtnInProfileUpdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Femme" />
+            </RadioGroup>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/TextInputLayoutUserPhoneNumberInProfileUpdate"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="@dimen/_250sdp"
+                android:layout_height="wrap_content"
+                android:hint="@string/votre_num_ro_telephone"
+                app:endIconMode="clear_text"
+                app:helperText="@string/votre_num_ro_telephone"
+                app:helperTextEnabled="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="@+id/DateBtnInProfileUpdate"
+                app:layout_constraintTop_toBottomOf="@+id/sexeTypeGroupInProfileUpdate"
+                app:layout_constraintVertical_bias=".04"
+                app:prefixText="+212 "
+                app:prefixTextColor="@color/black"
+                app:startIconDrawable="@drawable/ic_phone">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextUserPhoneNumberInProfileUpdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:inputType="phone"
+                    android:singleLine="true" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/TextInputLayoutUserEmailInProfileUpdate"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="@dimen/_250sdp"
+                android:layout_height="wrap_content"
+                android:hint="@string/votre_email"
+                app:endIconMode="clear_text"
+                app:helperText="@string/votre_email"
+                app:helperTextEnabled="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/TextInputLayoutUserPhoneNumberInProfileUpdate"
+                app:layout_constraintStart_toStartOf="@+id/TextInputLayoutUserPhoneNumberInProfileUpdate"
+                app:layout_constraintTop_toBottomOf="@+id/TextInputLayoutUserPhoneNumberInProfileUpdate"
+                app:layout_constraintVertical_bias=".05"
+                app:startIconDrawable="@drawable/ic_email">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextUserEmailInProfileUpdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/TextInputLayoutUserPasswordInProfileUpdate"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="@dimen/_250sdp"
+                android:layout_height="wrap_content"
+                android:hint="@string/votre_mote_de_passe"
+                app:endIconMode="password_toggle"
+                app:helperText="@string/votre_mote_de_passe"
+                app:helperTextEnabled="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/TextInputLayoutUserEmailInProfileUpdate"
+                app:layout_constraintStart_toStartOf="@+id/TextInputLayoutUserEmailInProfileUpdate"
+                app:layout_constraintTop_toBottomOf="@+id/TextInputLayoutUserEmailInProfileUpdate"
+                app:layout_constraintVertical_bias=".05"
+                app:startIconDrawable="@drawable/ic_passeword">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextUserPasswordInProfileUpdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionGo"
+                    android:inputType="textPassword"
+                    android:singleLine="true" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageView
+                android:id="@+id/IdentityIconInProfileUpdate"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:src="@drawable/ic_identity"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="@+id/TextInputLayoutUserPasswordInProfileUpdate"
+                app:layout_constraintTop_toBottomOf="@+id/TextInputLayoutUserPasswordInProfileUpdate"
+                app:layout_constraintVertical_bias=".1" />
+
+            <TextView
+                android:id="@+id/IdentityTvInProfileUpdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pièces d'identités"
+                android:textSize="@dimen/_18sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/IdentityIconInProfileUpdate"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias=".05"
+                app:layout_constraintStart_toEndOf="@+id/IdentityIconInProfileUpdate"
+                app:layout_constraintTop_toTopOf="@+id/IdentityIconInProfileUpdate" />
+
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Une seule piece d'edentité est suffisante pour vérifier votre compte"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/TextInputLayoutUserPasswordInProfileUpdate"
+                app:layout_constraintStart_toStartOf="@+id/IdentityTvInProfileUpdate"
+                app:layout_constraintTop_toTopOf="@+id/IdentityTvInProfileUpdate"
+                app:layout_constraintVertical_bias=".1" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/CINFaceCvInProfileUpdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/PassportCvInProfileUpdate"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintVertical_bias="1"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="@+id/IdentityIconInProfileUpdate"
+                app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+                <ImageView
+                    android:id="@+id/CINFaceMvInProfileUpdate"
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_gravity="center_vertical"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/cin_face" />
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CIN face"
+                android:textSize="@dimen/_14sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView3"
+                app:layout_constraintEnd_toEndOf="@+id/CINFaceCvInProfileUpdate"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="@+id/CINFaceCvInProfileUpdate"
+                app:layout_constraintTop_toBottomOf="@id/CINFaceCvInProfileUpdate" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/CINBackCvInProfileUpdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintVertical_bias="1"
+                app:layout_constraintBottom_toBottomOf="@+id/PassportCvInProfileUpdate"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias=".07"
+                app:layout_constraintStart_toEndOf="@+id/CINFaceCvInProfileUpdate"
+                app:layout_constraintTop_toTopOf="@+id/CINFaceCvInProfileUpdate">
+
+                <ImageView
+                    android:id="@+id/CINBackMvInProfileUpdate"
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_gravity="center_vertical"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/cin_back" />
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CIN Arre"
+                android:textSize="@dimen/_14sdp"
+
+                app:layout_constraintBottom_toBottomOf="@+id/textView5"
+                app:layout_constraintEnd_toEndOf="@+id/CINBackCvInProfileUpdate"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="@+id/CINBackCvInProfileUpdate"
+                app:layout_constraintTop_toBottomOf="@id/CINBackCvInProfileUpdate" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/PassportCvInProfileUpdate"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_80sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.7"
+                app:layout_constraintStart_toEndOf="@+id/CINBackCvInProfileUpdate"
+                app:layout_constraintTop_toBottomOf="@+id/textView2"
+                app:layout_constraintVertical_bias=".1">
+
+                <ImageView
+                    android:id="@+id/PassportMvInProfileUpdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/passport" />
+
+            </androidx.cardview.widget.CardView>
+
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Passport"
+                android:textSize="@dimen/_14sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/PassportCvInProfileUpdate"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="@+id/PassportCvInProfileUpdate"
+                app:layout_constraintTop_toBottomOf="@id/PassportCvInProfileUpdate"
+                app:layout_constraintVertical_bias=".05" />
+
+
+            <Button
+                android:id="@+id/EnregistrerBtnInProfileUpdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_40sdp"
+                android:layout_marginBottom="@dimen/_40sdp"
+                android:text="Enregistrer"
+                android:background="@drawable/button_bg_slected"
+                android:textAllCaps="false"
+                android:textColor="@color/yellow_200"
+                app:backgroundTint="@null"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/CINBackCvInProfileUpdate"
+                app:layout_constraintStart_toStartOf="@+id/textView4"
+                app:layout_constraintTop_toBottomOf="@+id/textView4"
+                app:layout_constraintVertical_bias=".3" />
+
+            <Button
+                android:id="@+id/AnnulerBtnInProfileUpdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Annuler"
+                android:textAllCaps="false"
+                android:textColor="@color/yellow_200"
+                android:background="@drawable/button_bg_slected"
+                app:backgroundTint="@null"
+                app:layout_constraintBottom_toBottomOf="@+id/EnregistrerBtnInProfileUpdate"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/EnregistrerBtnInProfileUpdate"
+                app:layout_constraintTop_toTopOf="@+id/EnregistrerBtnInProfileUpdate" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="0dp"
+                android:background="@color/yellow_200"
+                app:layout_constraintBottom_toBottomOf="@+id/textView3"
+                app:layout_constraintEnd_toStartOf="@+id/PassportCvInProfileUpdate"
+                app:layout_constraintStart_toEndOf="@+id/CINBackCvInProfileUpdate"
+                app:layout_constraintTop_toTopOf="@+id/PassportCvInProfileUpdate" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

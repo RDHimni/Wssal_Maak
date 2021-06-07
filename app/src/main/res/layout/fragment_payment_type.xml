@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.paymenttype.PaymentTypeFragment">
+
+        <ImageView
+            android:id="@+id/GoBackIconInPaymentTypeFrag"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:scaleType="center"
+            android:src="@drawable/ic_back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias=".05"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias=".05" />
+
+        <Button
+            android:id="@+id/SuivantBtnInPaymentTypeFrag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_30sdp"
+            android:background="@drawable/button_bg"
+            android:text="@string/suivant"
+
+            app:backgroundTint="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mode de paiement"
+            android:textColor="@color/blue_700"
+            android:textSize="@dimen/_16sdp"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/_14sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/GoBackIconInPaymentTypeFrag"
+            app:layout_constraintVertical_bias="0" />
+
+        <RadioButton
+            android:id="@+id/paiementCartBanckRadionBtnInTypeFrag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Paiement par Carte Bancaire"
+            app:layout_constraintVertical_bias=".1"
+            app:layout_constraintHorizontal_bias=".1"
+            app:layout_constraintBottom_toTopOf="@+id/SuivantBtnInPaymentTypeFrag"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <RadioButton
+            android:id="@+id/paiementCashkRadionBtnInTypeFrag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Paiement par Cash"
+            app:layout_constraintHorizontal_bias="0"
+            android:layout_marginTop="@dimen/_20sdp"
+            app:layout_constraintVertical_bias=".1"
+            app:layout_constraintBottom_toTopOf="@+id/SuivantBtnInPaymentTypeFrag"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/paiementCartBanckRadionBtnInTypeFrag"
+            app:layout_constraintTop_toBottomOf="@+id/paiementCartBanckRadionBtnInTypeFrag" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

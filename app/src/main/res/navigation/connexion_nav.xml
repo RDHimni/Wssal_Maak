@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/connexion_nav"
+    app:startDestination="@id/connexionRdFragment">
+    <fragment
+        android:id="@+id/connexionRdFragment"
+        android:name="ridaz.wssalmaak.ui.connexion.ConnexionRdFragment"
+        android:label="fragment_connexion_rd"
+        tools:layout="@layout/fragment_connexion_rd" >
+        <action
+            android:id="@+id/action_connexionRdFragment_to_phoneNumberRdFragment"
+            app:destination="@id/phoneNumberRdFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+        <action
+            android:id="@+id/action_connexionRdFragment_to_emailPasswordConnexionRdFragment"
+            app:destination="@id/emailPasswordConnexionRdFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/phoneNumberRdFragment"
+        android:name="ridaz.wssalmaak.ui.phonenumber.PhoneNumberRdFragment"
+        android:label="phone_number_rd_fragment"
+        tools:layout="@layout/phone_number_rd_fragment" >
+        <action
+            android:id="@+id/action_phoneNumberRdFragment_to_connexionRdFragment"
+            app:destination="@id/connexionRdFragment" />
+        <action
+            android:id="@+id/action_phoneNumberRdFragment_to_codeOTPRdFragment"
+            app:destination="@id/codeOTPRdFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/codeOTPRdFragment"
+        android:name="ridaz.wssalmaak.ui.codeotp.CodeOTPRdFragment"
+        android:label="fragment_code_o_t_p_rd"
+        tools:layout="@layout/fragment_code_o_t_p_rd" >
+        <action
+            android:id="@+id/action_codeOTPRdFragment_to_phoneNumberRdFragment"
+            app:destination="@id/phoneNumberRdFragment" />
+        <action
+            android:id="@+id/action_codeOTPRdFragment_to_emailPasswordInscriptionRdFragment"
+            app:destination="@id/emailPasswordInscriptionRdFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/emailPasswordInscriptionRdFragment"
+        android:name="ridaz.wssalmaak.ui.emailpasswordinscription.EmailPasswordInscriptionRdFragment"
+        android:label="email_password_inscription_rd_fragment"
+        tools:layout="@layout/email_password_inscription_rd_fragment" >
+        <action
+            android:id="@+id/action_emailPasswordInscriptionRdFragment_to_codeOTPRdFragment"
+            app:destination="@id/codeOTPRdFragment" />
+        <action
+            android:id="@+id/action_emailPasswordInscriptionRdFragment_to_userInfosInscriptionRdFragment"
+            app:destination="@id/userInfosInscriptionRdFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/userInfosInscriptionRdFragment"
+        android:name="ridaz.wssalmaak.ui.userinfosinscription.UserInfosInscriptionRdFragment"
+        android:label="user_infos_inscription_rd_fragment"
+        tools:layout="@layout/user_infos_inscription_rd_fragment" >
+        <action
+            android:id="@+id/action_userInfosInscriptionRdFragment_to_emailPasswordInscriptionRdFragment"
+            app:destination="@id/emailPasswordInscriptionRdFragment" />
+        <action
+            android:id="@+id/action_userInfosInscriptionRdFragment_to_mobile_navigation"
+            app:destination="@id/mobile_navigation" />
+    </fragment>
+    <fragment
+        android:id="@+id/emailPasswordConnexionRdFragment"
+        android:name="ridaz.wssalmaak.ui.connexionemailpassword.EmailPasswordConnexionRdFragment"
+        android:label="email_password_connexion_rd_fragment"
+        tools:layout="@layout/email_password_connexion_rd_fragment" >
+        <action
+            android:id="@+id/action_emailPasswordConnexionRdFragment_to_connexionRdFragment"
+            app:destination="@id/connexionRdFragment" />
+    </fragment>
+    <include app:graph="@navigation/mobile_navigation" />
+</navigation>

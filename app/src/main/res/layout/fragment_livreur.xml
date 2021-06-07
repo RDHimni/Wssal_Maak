@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg0"
+        tools:context=".ui.livreur.LivreurFragment">
+
+        <RelativeLayout
+            android:id="@+id/NavigationDrawerRlInDriver"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias=".05"
+            android:onClick="openCloseNavigationDrawer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias=".03"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/NavigationDrawerIconInDriver"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:onClick="openCloseNavigationDrawer"
+                android:src="@drawable/ic_dr" />
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/NotificationRlInDriver"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="@+id/NavigationDrawerRlInDriver"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias=".98"
+            app:layout_constraintStart_toEndOf="@+id/NavigationDrawerRlInDriver"
+            app:layout_constraintTop_toTopOf="@+id/NavigationDrawerRlInDriver">
+
+            <ImageView
+                android:id="@+id/NotificationIconInPassenger"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:onClick="openCloseNavigationDrawer"
+                android:src="@drawable/ic_notifications" />
+
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/MesOffersBnInClientFrag"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_50sdp"
+            android:background="@drawable/button_bg_slected"
+            android:drawableLeft="@drawable/ic_offer"
+            android:text="Mes offres"
+            android:textAllCaps="false"
+            android:textColor="@color/blue_700"
+            app:backgroundTint="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/NavigationDrawerRlInDriver"
+            app:layout_constraintVertical_bias="0" />
+
+        <Button
+            android:id="@+id/CreeOffersBnInClientFrag"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/button_bg_slected"
+            android:text="Créer une offre"
+            android:textAllCaps="false"
+            android:drawableLeft="@drawable/ic_add"
+            android:textColor="@color/blue_700"
+            app:backgroundTint="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/MesOffersBnInClientFrag"
+            app:layout_constraintVertical_bias="0" />
+
+
+        <TextView
+            android:id="@+id/text_gallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

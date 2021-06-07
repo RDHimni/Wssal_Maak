@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/paymentTypeFragment">
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="ridaz.wssalmaak.ui.profile.ProfileFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_nav_profile_to_updateProfileActivity"
+            app:destination="@id/updateProfileActivity" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_client"
+        android:name="ridaz.wssalmaak.ui.client.ClientFragment"
+        android:label="fragment_passenger"
+        tools:layout="@layout/fragment_client" >
+        <action
+            android:id="@+id/action_nav_client_to_mesDemandsFragment"
+            app:destination="@id/mesDemandsFragment" />
+        <action
+            android:id="@+id/action_nav_client_to_reservationFragment2"
+            app:destination="@id/reservationFragment2" />
+        <action
+            android:id="@+id/action_nav_client_to_searchOfferFragment"
+            app:destination="@id/searchOfferFragment" />
+        <action
+            android:id="@+id/action_nav_client_to_notificationFragment"
+            app:destination="@id/notificationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_livreur"
+        android:name="ridaz.wssalmaak.ui.livreur.LivreurFragment"
+        android:label="fragment_driver"
+        tools:layout="@layout/fragment_livreur" >
+        <action
+            android:id="@+id/action_nav_livreur_to_mesOffesFragment"
+            app:destination="@id/mesOffesFragment" />
+        <action
+            android:id="@+id/action_nav_livreur_to_notificationFragment"
+            app:destination="@id/notificationFragment" />
+        <action
+            android:id="@+id/action_nav_livreur_to_villeDepartFragment"
+            app:destination="@id/villeDepartFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_chat"
+        android:name="ridaz.wssalmaak.ui.chat.ChatFragment"
+        android:label="chat_fragment"
+        tools:layout="@layout/chat_fragment" />
+    <fragment
+        android:id="@+id/nav_wallet"
+        android:name="ridaz.wssalmaak.ui.wallet.WalletFragment"
+        android:label="fragment_wallet"
+        tools:layout="@layout/fragment_wallet" />
+    <activity
+        android:id="@+id/updateProfileActivity"
+        android:name="ridaz.wssalmaak.ui.updateprofile.UpdateProfileActivity"
+        android:label="UpdateProfileActivity"
+        tools:layout="@layout/activity_update_profile"
+
+        />
+    <fragment
+        android:id="@+id/personneFragment"
+        android:name="ridaz.wssalmaak.ui.updateprofile.personne.PersonneFragment"
+        android:label="PersonneFragment"
+        tools:layout="@layout/personne_fragment"
+
+        >
+        <action
+            android:id="@+id/action_personneFragment_to_updateProfileActivity"
+            app:destination="@id/updateProfileActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/carsFragment"
+        android:name="ridaz.wssalmaak.ui.updateprofile.cars.CarsFragment"
+        android:label="CarsFragment"
+        tools:layout="@layout/cars_fragment"
+        >
+        <action
+            android:id="@+id/action_carsFragment_to_createNewCarActivity"
+            app:destination="@id/createNewCarActivity" />
+        <action
+            android:id="@+id/action_carsFragment_to_updateProfileActivity"
+            app:destination="@id/updateProfileActivity" />
+    </fragment>
+    <activity
+        android:id="@+id/createNewCarActivity"
+        android:name="ridaz.wssalmaak.ui.updateprofile.cars.CreateNewCarActivity"
+        android:label="CreateNewCarActivity"
+        tools:layout="@layout/activity_create_new_car"
+        />
+    <fragment
+        android:id="@+id/mesDemandsFragment"
+        android:name="ridaz.wssalmaak.ui.mesdemands.MesDemandsFragment"
+        android:label="mes_demands_fragment"
+        tools:layout="@layout/mes_demands_fragment" />
+    <fragment
+        android:id="@+id/reservationFragment2"
+        android:name="ridaz.wssalmaak.ui.reservation.ReservationFragment"
+        android:label="ReservationFragment"
+        tools:layout="@layout/reservation_fragment"
+        >
+        <action
+            android:id="@+id/action_reservationFragment2_to_confirmationReservationFragment"
+            app:destination="@id/confirmationReservationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/confirmationReservationFragment"
+        android:name="ridaz.wssalmaak.ui.confirmereservation.ConfirmationReservationFragment"
+        android:label="confirmation_reservation_fragment"
+        tools:layout="@layout/confirmation_reservation_fragment" />
+    <fragment
+        android:id="@+id/searchOfferFragment"
+        android:name="ridaz.wssalmaak.ui.searchoffer.SearchOfferFragment"
+        android:label="SearchOfferFragment"
+        tools:layout="@layout/search_offer_fragment"
+        />
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="ridaz.wssalmaak.ui.notification.NotificationFragment"
+        android:label="NotificationFragment"
+        tools:layout="@layout/notification_fragment"
+        />
+    <fragment
+        android:id="@+id/mesOffesFragment"
+        android:name="ridaz.wssalmaak.ui.mesoffer.MesOffesFragment"
+        android:label="MesOffesFragment"
+        tools:layout="@layout/mes_offes_fragment"
+        />
+    <fragment
+        android:id="@+id/villeDepartFragment"
+        android:name="ridaz.wssalmaak.ui.villesdepart.VilleDepartFragment"
+        android:label="VilleDepartFragment"
+        tools:layout="@layout/fragment_ville_depart"
+        >
+        <action
+            android:id="@+id/action_villeDepartFragment_to_adresseDepartFragment"
+            app:destination="@id/adresseDepartFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adresseDepartFragment"
+        android:name="ridaz.wssalmaak.ui.adressedepart.AdresseDepartFragment"
+        android:label="AdresseDepartFragment"
+        tools:layout="@layout/fragment_adresse_depart"
+        >
+        <action
+            android:id="@+id/action_adresseDepartFragment_to_villeAriveFragment"
+            app:destination="@id/villeAriveFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/villeAriveFragment"
+        android:name="ridaz.wssalmaak.ui.villearive.VilleAriveFragment"
+        android:label="VilleAriveFragment"
+        tools:layout="@layout/fragment_ville_arive"
+        >
+        <action
+            android:id="@+id/action_villeAriveFragment_to_creeOfferFragment"
+            app:destination="@id/creeOfferFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/creeOfferFragment"
+        android:name="ridaz.wssalmaak.ui.ceeroffer.CreeOfferFragment"
+        android:label="CreeOfferFragment"
+        tools:layout="@layout/cree_offer_fragment"
+        >
+        <action
+            android:id="@+id/action_creeOfferFragment_to_stopeVillesFragment"
+            app:destination="@id/stopeVillesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/stopeVillesFragment"
+        android:name="ridaz.wssalmaak.ui.stopevilles.StopeVillesFragment"
+        android:label="StopeVillesFragment"
+        tools:layout="@layout/fragment_stope_villes"
+        >
+        <action
+            android:id="@+id/action_stopeVillesFragment_to_sizeAndPriceFragment2"
+            app:destination="@id/sizeAndPriceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sizeAndPriceFragment"
+        android:name="ridaz.wssalmaak.ui.sizeandprice.SizeAndPriceFragment"
+        android:label="SizeAndPriceFragment"
+        tools:layout="@layout/fragment_size_and_price"
+        >
+        <action
+            android:id="@+id/action_sizeAndPriceFragment_to_selectCarFragment"
+            app:destination="@id/selectCarFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectCarFragment"
+        android:name="ridaz.wssalmaak.ui.selectcar.SelectCarFragment"
+        android:label="SelectCarFragment"
+        tools:layout="@layout/fragment_select_car"
+        >
+        <action
+            android:id="@+id/action_selectCarFragment_to_paymentTypeFragment"
+            app:destination="@id/paymentTypeFragment" />
+        <action
+            android:id="@+id/action_selectCarFragment_to_createNewCarActivity"
+            app:destination="@id/createNewCarActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/paymentTypeFragment"
+        android:name="ridaz.wssalmaak.ui.paymenttype.PaymentTypeFragment"
+        android:label="fragment_payment_type"
+        tools:layout="@layout/fragment_payment_type" />
+</navigation>

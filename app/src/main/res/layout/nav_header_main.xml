@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_150sdp"
+    android:background="@drawable/side_nav_bar"
+    android:id="@+id/header"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:padding="@dimen/_16sdp"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/UserImageViewNavHead"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_centerHorizontal="true"
+            android:elevation="2dp"
+            app:civ_border_color="@color/blue_700"
+            android:src="@drawable/ridaz"
+            app:civ_border_width="2dp"
+            app:layout_constraintHorizontal_bias=".04"
+            app:layout_constraintVertical_bias=".3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/userNameInHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/_8sdp"
+        android:text="@string/nav_header_title"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintBottom_toBottomOf="@+id/UserImageViewNavHead"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias=".2"
+        app:layout_constraintStart_toEndOf="@+id/UserImageViewNavHead"
+        app:layout_constraintTop_toTopOf="@+id/UserImageViewNavHead"
+        app:layout_constraintVertical_bias=".9" />
+
+    <RatingBar
+        android:id="@+id/ratingBarInHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        style="?android:attr/ratingBarStyleSmall"
+        android:progressTint="#FFEB3B"
+        android:numStars = "5"
+        android:rating   = "4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintStart_toStartOf="@+id/UserImageViewNavHead"
+        app:layout_constraintTop_toBottomOf="@+id/UserImageViewNavHead" />
+
+
+    <TextView
+        android:id="@+id/EmailTvInHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="@string/nav_header_subtitle"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/ratingBarInHeader"
+        app:layout_constraintTop_toBottomOf="@+id/ratingBarInHeader" />
+</androidx.constraintlayout.widget.ConstraintLayout>

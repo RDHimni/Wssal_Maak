@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg0"
+        tools:context=".ui.profile.ProfileFragment">
+
+
+        <RelativeLayout
+            android:id="@+id/NavigationDrawerRlInMyProfile"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias=".05"
+            android:onClick="openCloseNavigationDrawer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias=".03"
+            android:gravity="center"
+            >
+
+            <ImageView
+                android:id="@+id/NavigationDrawerIconInMyProfile"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:onClick="openCloseNavigationDrawer"
+                android:src="@drawable/ic_dr"
+                />
+
+
+        </RelativeLayout>
+
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:layout_centerHorizontal="true"
+            app:layout_constraintVertical_bias=".25"
+            android:elevation="2dp"
+            android:src="@drawable/ridaz"
+            app:civ_border_color="@color/blue_700"
+            app:civ_border_width="2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/userNameInMyProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rida Dhimni"
+            android:textColor="#303030"
+            android:textSize="@dimen/_20sdp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profile_image"
+            app:layout_constraintVertical_bias=".01" />
+
+        <RatingBar
+            android:id="@+id/ratingBarInMyProfile"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:progressTint="@color/yellow_200"
+            android:rating="4"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/userNameInMyProfile"
+            app:layout_constraintVertical_bias=".01" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:text="Membre depuis le "
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="@+id/dateInscriptionInMyProfile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias=".3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/dateInscriptionInMyProfile" />
+
+        <TextView
+            android:id="@+id/dateInscriptionInMyProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="07/02/2021"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="normal"
+            app:layout_constraintHorizontal_bias=".1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView6"
+            app:layout_constraintTop_toBottomOf="@+id/ratingBarInMyProfile"
+            app:layout_constraintVertical_bias=".02" />
+        <View
+            android:id="@+id/view"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="1dp"
+            android:background="@color/yellow_700"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dateInscriptionInMyProfile"
+            app:layout_constraintVertical_bias=".1" />
+
+
+        <ImageView
+            android:id="@+id/PhoneNumberIconInMyProfile"
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="@dimen/_18sdp"
+            android:src="@drawable/ic_phone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias=".05"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view"
+            app:layout_constraintVertical_bias=".1" />
+
+        <TextView
+            android:id="@+id/PhoneNumberTvInMyProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0620869503"
+            android:textSize="@dimen/_14sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/PhoneNumberIconInMyProfile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias=".05"
+            app:layout_constraintStart_toEndOf="@+id/PhoneNumberIconInMyProfile"
+            app:layout_constraintTop_toTopOf="@+id/PhoneNumberIconInMyProfile" />
+
+        <ImageView
+            android:id="@+id/CheckPhoneIconInMyProfile"
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="@dimen/_18sdp"
+            android:src="@drawable/ic_valide"
+            app:layout_constraintBottom_toBottomOf="@+id/PhoneNumberTvInMyProfile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias=".95"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/PhoneNumberTvInMyProfile" />
+
+        <!--************************************************************-->
+        <!--************************************************************-->
+
+        <ImageView
+            android:id="@+id/EmailIconInMyProfile"
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="@dimen/_18sdp"
+            android:src="@drawable/ic_email"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias=".05"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/PhoneNumberIconInMyProfile"
+            app:layout_constraintVertical_bias=".1" />
+
+        <TextView
+            android:id="@+id/EmailTvInMyProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rdhimni@gmail.com"
+            android:textSize="@dimen/_14sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/EmailIconInMyProfile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias=".05"
+            app:layout_constraintStart_toEndOf="@+id/EmailIconInMyProfile"
+            app:layout_constraintTop_toTopOf="@+id/EmailIconInMyProfile" />
+
+        <ImageView
+            android:id="@+id/ChecEmailIconInMyProfile"
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="@dimen/_18sdp"
+            android:src="@drawable/ic_croi"
+            app:layout_constraintBottom_toBottomOf="@+id/EmailTvInMyProfile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias=".95"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/EmailTvInMyProfile" />
+
+        <!--************************************************************-->
+        <!--************************************************************-->
+
+        <ImageView
+            android:id="@+id/IdentityIconInMyProfile"
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="@dimen/_18sdp"
+            android:src="@drawable/ic_identity"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias=".05"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/EmailIconInMyProfile"
+            app:layout_constraintVertical_bias=".1" />
+
+        <TextView
+            android:id="@+id/IdentityTvInMyProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pièce d'identité non vérifiée"
+            android:textSize="@dimen/_14sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/IdentityIconInMyProfile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias=".05"
+            app:layout_constraintStart_toEndOf="@+id/IdentityIconInMyProfile"
+            app:layout_constraintTop_toTopOf="@+id/IdentityIconInMyProfile" />
+
+        <ImageView
+            android:id="@+id/CheckIdentityIconInMyProfile"
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="@dimen/_18sdp"
+            android:src="@drawable/ic_croi"
+            app:layout_constraintBottom_toBottomOf="@+id/IdentityTvInMyProfile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias=".95"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/IdentityTvInMyProfile" />
+
+        <Button
+            android:id="@+id/ModifyProfileBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Modifier ou compléter mon Profile"
+            android:textAllCaps="false"
+            app:backgroundTint="@null"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:textColor="@color/yellow_200"
+            android:background="@drawable/button_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/IdentityTvInMyProfile" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

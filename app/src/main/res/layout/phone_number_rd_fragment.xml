@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg1"
+        tools:context=".ui.phonenumber.PhoneNumberRdFragment">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TextInputLayoutUserPhoneNumberInProfileUpdate"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="@dimen/_250sdp"
+            android:layout_height="wrap_content"
+            android:hint="@string/votre_num_ro_telephone"
+            app:endIconMode="clear_text"
+            app:helperText="@string/votre_num_ro_telephone"
+            app:helperTextEnabled="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias=".7"
+            app:prefixText="+212 "
+            app:prefixTextColor="@color/black"
+            app:startIconDrawable="@drawable/ic_phone">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:inputType="phone"
+                android:singleLine="true" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <Button
+            android:id="@+id/getCodeBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/envoyez_code_btn"
+            android:background="@drawable/button_bg"
+            android:textAllCaps="false"
+            android:textColor="@color/blue_700"
+            app:backgroundTint="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/TextInputLayoutUserPhoneNumberInProfileUpdate"
+            app:layout_constraintVertical_bias=".1" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

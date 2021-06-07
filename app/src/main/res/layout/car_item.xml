@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="@dimen/_10sdp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:cardBackgroundColor="#FFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent=".5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent=".9" >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_250sdp">
+
+            <ImageView
+                android:id="@+id/iconCarInCarItem"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:elevation="2dp"
+                app:layout_constraintVertical_bias=".05"
+                app:layout_constraintHorizontal_bias=".05"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_car" />
+
+            <TextView
+                android:id="@+id/modelCarTvInCarItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DACIA DOKKER"
+                android:textColor="@color/blue_700"
+                app:layout_constraintHorizontal_bias=".05"
+                android:textStyle="bold"
+
+                app:layout_constraintBottom_toBottomOf="@+id/iconCarInCarItem"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iconCarInCarItem"
+                app:layout_constraintTop_toTopOf="@+id/iconCarInCarItem" />
+
+            <TextView
+                android:id="@+id/TypeCarTvInCarItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Voiture W"
+                app:layout_constraintVertical_bias=".01"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/modelCarTvInCarItem"
+                app:layout_constraintStart_toStartOf="@+id/modelCarTvInCarItem"
+                app:layout_constraintTop_toBottomOf="@+id/modelCarTvInCarItem" />
+
+            <ImageView
+                android:id="@+id/deleteIconInCarItem"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:elevation="2dp"
+                app:layout_constraintBottom_toBottomOf="@+id/iconCarInCarItem"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias=".9"
+                app:layout_constraintStart_toEndOf="@+id/modelCarTvInCarItem"
+                app:layout_constraintTop_toTopOf="@+id/iconCarInCarItem"
+                app:srcCompat="@drawable/ic_delete" />
+
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Numéro de Matricule"
+                android:textSize="@dimen/_14sdp"
+                app:layout_constraintHorizontal_bias=".1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/TypeCarTvInCarItem"
+                app:layout_constraintVertical_bias=".05" />
+
+            <EditText
+                android:id="@+id/MatriculeCarEdittext1Id"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_30sdp"
+                android:background="@drawable/button_bg_slected"
+                android:hint="ex:1234"
+                android:paddingHorizontal="@dimen/_14sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="@+id/textView7"
+                app:layout_constraintTop_toBottomOf="@+id/textView7"
+                app:layout_constraintVertical_bias=".05" />
+
+            <EditText
+                android:id="@+id/MatriculeCarEdittext2Id"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:background="@drawable/button_bg_slected"
+                android:hint="ex:A"
+                android:paddingHorizontal="@dimen/_14sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/MatriculeCarEdittext1Id"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias=".15"
+                app:layout_constraintStart_toEndOf="@+id/MatriculeCarEdittext1Id"
+                app:layout_constraintTop_toTopOf="@+id/MatriculeCarEdittext1Id" />
+
+            <EditText
+                android:id="@+id/MatriculeCarEdittext3Id"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:background="@drawable/button_bg_slected"
+                android:hint="ex:1"
+                android:paddingHorizontal="@dimen/_14sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/MatriculeCarEdittext2Id"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias=".4"
+                app:layout_constraintStart_toEndOf="@+id/MatriculeCarEdittext2Id"
+                app:layout_constraintTop_toTopOf="@+id/MatriculeCarEdittext2Id" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="@dimen/_250sdp"
+                android:layout_height="1dp"
+                android:background="@color/blue_700"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/MatriculeCarEdittext1Id"
+                app:layout_constraintVertical_bias=".1" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date d'experation de l'assurance"
+                android:textSize="@dimen/_14sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/MatriculeCarEdittext3Id"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="@+id/textView7"
+                app:layout_constraintTop_toBottomOf="@+id/view"
+                app:layout_constraintVertical_bias=".05" />
+
+            <Button
+                android:id="@+id/DateBtnInCarItem"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_30sdp"
+                android:background="@drawable/button_bg_slected"
+                android:textColor="#737373"
+                app:backgroundTint="@null"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/textView8"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="@+id/textView8"
+                app:layout_constraintTop_toBottomOf="@+id/textView8"
+                app:layout_constraintVertical_bias=".05" />
+
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="@dimen/_250sdp"
+                android:layout_height="1dp"
+                android:background="@color/blue_700"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/DateBtnInCarItem"
+                app:layout_constraintVertical_bias=".1" />
+
+            <TextView
+                android:id="@+id/textVie9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Couleur :"
+                android:textSize="@dimen/_14sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/MatriculeCarEdittext3Id"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="@+id/textView7"
+                app:layout_constraintTop_toBottomOf="@+id/view2"
+                app:layout_constraintVertical_bias=".2" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/ColorBtnInCarItem"
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:onClick="PickColor"
+                app:cardBackgroundColor="#ccccb3"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardElevation="2dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/textView8"
+                app:layout_constraintHorizontal_bias="0.525"
+                app:layout_constraintStart_toEndOf="@+id/textVie9"
+                app:layout_constraintTop_toBottomOf="@+id/view2"
+                  />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.updateprofile.cars.CreateNewCarActivity">
+
+        <ImageView
+            android:id="@+id/GoBackIconInCreateNewCar"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:scaleType="center"
+            android:onClick="GoBackIconInCreateNewCar"
+            android:src="@drawable/ic_back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias=".05"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias=".05" />
+
+        <TextView
+            android:id="@+id/anewcarjtv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ajout d'une nouvelle voiture"
+            android:textColor="@color/blue_700"
+            android:textSize="@dimen/_18sdp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/GoBackIconInCreateNewCar"
+            app:layout_constraintVertical_bias=".02" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/searchModeleCv"
+            android:layout_width="@dimen/_250sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:elevation="2dp"
+            app:cardCornerRadius="@dimen/_20sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/anewcarjtv"
+            app:layout_constraintVertical_bias=".04">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/searchModeleCns"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+
+                <EditText
+                    android:id="@+id/searchModeletv"
+                    android:layout_width="@dimen/_170sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_gravity="center_vertical"
+                    android:background="#05FFFFFF"
+                    android:hint="Trouver le modéle"
+                    android:imeOptions="actionGo"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/searchModeleIc"
+                    android:layout_width="18dp"
+                    android:layout_height="21dp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:src="@drawable/ic_search"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/searchModeletv"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/validModeleIc"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:focusable="true"
+                    android:visibility="gone"
+                    android:focusableInTouchMode="true"
+                    android:src="@drawable/ic_valide"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/searchModeletv"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/carsModelList"
+            android:layout_width="@dimen/_260sdp"
+            android:layout_height="0dp"
+
+            android:paddingVertical="@dimen/_10sdp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/searchModeleCv"
+            app:layout_constraintVertical_bias=".1" />
+
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/CarInfosCns"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/searchModeleCv">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/searchModeleCv"
+                app:layout_constraintVertical_bias="0.0">
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/switchCarW"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="Voiture W  "
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias=".2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias=".05" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/switchCarUE"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="Voiture UE  "
+                    app:layout_constraintBottom_toBottomOf="@+id/switchCarW"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias=".5"
+                    app:layout_constraintStart_toEndOf="@+id/switchCarW"
+                    app:layout_constraintTop_toTopOf="@+id/switchCarW" />
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Numéro de Matricule"
+                    android:textSize="@dimen/_14sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/switchCarW"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toStartOf="@+id/switchCarW"
+                    app:layout_constraintTop_toBottomOf="@+id/switchCarW"
+                    app:layout_constraintVertical_bias=".05" />
+
+                <EditText
+                    android:id="@+id/MatriculeCarEdittext1Id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_30sdp"
+                    android:background="@drawable/button_bg_slected"
+                    android:hint="ex:1234"
+                    android:paddingHorizontal="@dimen/_14sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/switchCarUE"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toStartOf="@+id/textView7"
+                    app:layout_constraintTop_toBottomOf="@+id/textView7"
+                    app:layout_constraintVertical_bias=".05" />
+
+                <EditText
+                    android:id="@+id/MatriculeCarEdittext2Id"
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:background="@drawable/button_bg_slected"
+                    android:hint="ex:A"
+                    android:paddingHorizontal="@dimen/_14sdp"
+                    app:layout_constraintBottom_toBottomOf="@+id/MatriculeCarEdittext1Id"
+                    app:layout_constraintEnd_toEndOf="@+id/switchCarUE"
+                    app:layout_constraintHorizontal_bias=".2"
+                    app:layout_constraintStart_toEndOf="@+id/MatriculeCarEdittext1Id"
+                    app:layout_constraintTop_toTopOf="@+id/MatriculeCarEdittext1Id" />
+
+                <EditText
+                    android:id="@+id/MatriculeCarEdittext3Id"
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:background="@drawable/button_bg_slected"
+                    android:hint="ex:1"
+                    android:paddingHorizontal="@dimen/_14sdp"
+                    app:layout_constraintBottom_toBottomOf="@+id/MatriculeCarEdittext2Id"
+                    app:layout_constraintEnd_toEndOf="@+id/switchCarUE"
+                    app:layout_constraintHorizontal_bias="1"
+                    app:layout_constraintStart_toEndOf="@+id/MatriculeCarEdittext2Id"
+                    app:layout_constraintTop_toTopOf="@+id/MatriculeCarEdittext2Id" />
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="@dimen/_250sdp"
+                    android:layout_height="1dp"
+                    android:background="@color/blue_700"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/MatriculeCarEdittext1Id"
+                    app:layout_constraintVertical_bias=".1" />
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Date d'experation de l'assurance"
+                    android:textSize="@dimen/_14sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/MatriculeCarEdittext3Id"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toStartOf="@+id/textView7"
+                    app:layout_constraintTop_toBottomOf="@+id/view"
+                    app:layout_constraintVertical_bias=".05" />
+
+                <Button
+                    android:id="@+id/DateBtnInCreateNewCar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_30sdp"
+                    android:background="@drawable/button_bg_slected"
+                    android:textColor="#737373"
+                    app:backgroundTint="@null"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/textView8"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toStartOf="@+id/textView8"
+                    app:layout_constraintTop_toBottomOf="@+id/textView8"
+                    app:layout_constraintVertical_bias=".05" />
+
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="@dimen/_250sdp"
+                    android:layout_height="1dp"
+                    android:background="@color/blue_700"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/DateBtnInCreateNewCar"
+                    app:layout_constraintVertical_bias=".1" />
+
+                <TextView
+                    android:id="@+id/textVie9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Couleur :"
+                    android:textSize="@dimen/_14sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/MatriculeCarEdittext3Id"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toStartOf="@+id/textView7"
+                    app:layout_constraintTop_toBottomOf="@+id/view2"
+                    app:layout_constraintVertical_bias=".1" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/ColorBtnInCreateNewCar"
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:onClick="PickColor"
+                    app:cardBackgroundColor="#ccccb3"
+                    app:cardCornerRadius="@dimen/_10sdp"
+                    app:cardElevation="2dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/textView8"
+                    app:layout_constraintHorizontal_bias="0.525"
+                    app:layout_constraintStart_toEndOf="@+id/textVie9"
+                    app:layout_constraintTop_toBottomOf="@+id/view2"
+                    app:layout_constraintVertical_bias="0.1" />
+
+                <Button
+                    android:id="@+id/EnregistrerBtnInCreateNewcar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_bg"
+                    android:layout_marginVertical="@dimen/_30sdp"
+                    android:text="Enregistrer"
+                    android:textAllCaps="false"
+                    android:textColor="@color/blue_700"
+                    app:backgroundTint="@null"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ColorBtnInCreateNewCar" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

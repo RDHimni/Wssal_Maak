@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg0"
+        tools:context=".ui.client.ClientFragment">
+
+
+        <RelativeLayout
+            android:id="@+id/NavigationDrawerRlInPassenger"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:gravity="center"
+            android:onClick="openCloseNavigationDrawer"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias=".05"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias=".03">
+
+            <ImageView
+                android:id="@+id/NavigationDrawerIconInPassenger"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:onClick="openCloseNavigationDrawer"
+                android:src="@drawable/ic_dr" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/NotificationRlInPassenger"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="@+id/NavigationDrawerRlInPassenger"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias=".98"
+            app:layout_constraintStart_toEndOf="@+id/NavigationDrawerRlInPassenger"
+            app:layout_constraintTop_toTopOf="@+id/NavigationDrawerRlInPassenger">
+
+            <ImageView
+                android:id="@+id/NotificationIconInPassenger"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:onClick="openCloseNavigationDrawer"
+                android:src="@drawable/ic_notifications" />
+
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/MesDemandesBnInClientFrag"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/button_bg_slected_rond"
+            android:drawableLeft="@drawable/ic_demand"
+            android:drawablePadding="@dimen/_10sdp"
+            android:text="Mes demandes"
+            android:textAllCaps="false"
+            android:textColor="@color/blue_700"
+            app:backgroundTint="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/NavigationDrawerRlInPassenger"
+            app:layout_constraintVertical_bias="0" />
+        <Button
+            android:id="@+id/searchOfferInClientFragment"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/button_bg_white"
+            android:drawableLeft="@drawable/ic_search"
+            android:drawablePadding="@dimen/_10sdp"
+            android:text="Trouver une offre"
+            android:textAllCaps="false"
+            android:textColor="@color/gray"
+            app:backgroundTint="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/MesDemandesBnInClientFrag"
+            app:layout_constraintVertical_bias="0" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/ListOffersInClientFragment"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/searchOfferInClientFragment" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
