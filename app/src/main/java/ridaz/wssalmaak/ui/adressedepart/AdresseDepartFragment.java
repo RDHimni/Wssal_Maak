@@ -56,7 +56,11 @@ public class AdresseDepartFragment extends Fragment implements OnMapReadyCallbac
     private LatLng latLng;
     private Address address;
     private String ville = "";
+    private String LatitudeMapVilleDepart = "";
+    private String LongitudeMapVilleDepart = "";
     private String adresseDepart = "";
+    private String LatitudeMapAdresseDepart = "";
+    private String LongitudeMapAdresseDepart = "";
 
     private FragmentAdresseDepartBinding binding;
     @Override
@@ -90,8 +94,18 @@ public class AdresseDepartFragment extends Fragment implements OnMapReadyCallbac
 
                 if (!adresseDepart.isEmpty()) {
                     Bundle bundle = new Bundle();
+
+                    LatitudeMapAdresseDepart = String.valueOf(latLng.latitude);
+                    LongitudeMapAdresseDepart = String.valueOf(latLng.longitude);
+
                     bundle.putString("villeDepart", ville);
+                    bundle.putString("LatitudeMapVilleDepart", LatitudeMapVilleDepart);
+                    bundle.putString("LongitudeMapVilleDepart", LongitudeMapVilleDepart);
+
                     bundle.putString("adresseDepart", adresseDepart);
+                    bundle.putString("LatitudeMapAdresseDepart", LatitudeMapAdresseDepart);
+                    bundle.putString("LongitudeMapAdresseDepart", LongitudeMapAdresseDepart);
+
                     Navigation.findNavController(view).navigate(R.id.action_adresseDepartFragment_to_villeAriveFragment,bundle);
 
                 }
@@ -108,7 +122,9 @@ public class AdresseDepartFragment extends Fragment implements OnMapReadyCallbac
         binding.AdresseDepList.setAdapter(adresseAdapter);
         binding.AdresseDepList.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.VERTICAL,false));
 
-        ville = getArguments().getString("ville");
+        ville = getArguments().getString("villeDepart");
+        LatitudeMapVilleDepart = getArguments().getString("LatitudeMapVilleDepart");
+        LongitudeMapVilleDepart =  getArguments().getString("LongitudeMapVilleDepart");
 
         binding.searchAdresseDeptv.addTextChangedListener(new TextWatcher() {
             @Override

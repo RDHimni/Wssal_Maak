@@ -20,7 +20,19 @@ public class SizeAndPriceFragment extends Fragment {
     private static final String TAG = "SizeAndPriceFragment";
     private FragmentSizeAndPriceBinding binding;
 
-    private String villeDepart,villeArrive,adresseDepart,dateAndHeureDepart,dateAndHeureArrive,villesStope,nombreDesKilos,priceParKilo;
+    private String villeDepart = "";
+    private String LatitudeMapVilleDepart = "";
+    private String LongitudeMapVilleDepart = "";
+
+    private String adresseDepart = "";
+    private String LatitudeMapAdresseDepart = "";
+    private String LongitudeMapAdresseDepart = "";
+
+    private String villeArrive = "";
+    private String LatitudeMapVilleArrive = "";
+    private String LongitudeMapVilleArrive = "";
+
+    private String dateAndHeureDepart,dateAndHeureArrive,villesStope,nombreDesKilos,priceParKilo;
 
 
     @Override
@@ -31,8 +43,19 @@ public class SizeAndPriceFragment extends Fragment {
 
 
         villeDepart = getArguments().getString("villeDepart");
-        villeArrive = getArguments().getString("villeArrive");
+        LatitudeMapVilleDepart = getArguments().getString("LatitudeMapVilleDepart");
+        LongitudeMapVilleDepart = getArguments().getString("LongitudeMapVilleDepart");
+
         adresseDepart = getArguments().getString("adresseDepart");
+        LatitudeMapAdresseDepart = getArguments().getString("LatitudeMapAdresseDepart");
+        LongitudeMapAdresseDepart = getArguments().getString("LongitudeMapAdresseDepart");
+
+        villeArrive = getArguments().getString("villeArrive");
+        LatitudeMapVilleArrive = getArguments().getString("LatitudeMapVilleArrive");
+        LongitudeMapVilleArrive = getArguments().getString("LongitudeMapVilleArrive");
+
+
+
         dateAndHeureDepart = getArguments().getString("dateAndHeureDepart");
         dateAndHeureArrive = getArguments().getString("dateAndHeureArrive");
         villesStope = getArguments().getString("villesStope");
@@ -54,8 +77,17 @@ public class SizeAndPriceFragment extends Fragment {
 
                 Bundle bundle = new Bundle();
                 bundle.putString("villeDepart",villeDepart);
-                bundle.putString("villeArrive",villeArrive);
+                bundle.putString("LatitudeMapVilleDepart", LatitudeMapVilleDepart);
+                bundle.putString("LongitudeMapVilleDepart", LongitudeMapVilleDepart);
+
                 bundle.putString("adresseDepart",adresseDepart);
+                bundle.putString("LatitudeMapAdresseDepart", LatitudeMapAdresseDepart);
+                bundle.putString("LongitudeMapAdresseDepart", LongitudeMapAdresseDepart);
+
+                bundle.putString("villeArrive",villeArrive);
+                bundle.putString("LatitudeMapVilleArrive", LatitudeMapVilleArrive);
+                bundle.putString("LongitudeMapVilleArrive", LongitudeMapVilleArrive);
+
                 bundle.putString("dateAndHeureDepart",dateAndHeureDepart);
                 bundle.putString("dateAndHeureArrive",dateAndHeureArrive);
                 bundle.putString("villesStope",villesStope);

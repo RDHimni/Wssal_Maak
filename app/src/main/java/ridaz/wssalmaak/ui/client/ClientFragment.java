@@ -21,6 +21,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
+import dagger.hilt.android.AndroidEntryPoint;
 import ridaz.wssalmaak.R;
 import ridaz.wssalmaak.adapters.OfferAdapter;
 import ridaz.wssalmaak.converters.Converters;
@@ -30,6 +31,7 @@ import ridaz.wssalmaak.models.Offer;
 import ridaz.wssalmaak.models.User;
 import ridaz.wssalmaak.ui.reservation.ReservationFragment;
 
+@AndroidEntryPoint
 public class ClientFragment extends Fragment {
 
     private static final String TAG = "ClientFragment";
@@ -84,6 +86,8 @@ public class ClientFragment extends Fragment {
 
         Offer offer = new Offer(
                 "villeDepart",
+                "LatitudeMapVilleDepart",
+                "LatitudeMapVilleDepart",
                 "adresseDepart",
                 "LatitudeMapAdresseDepart",
                 "LatitudeMapAdresseDepart",
@@ -100,11 +104,13 @@ public class ClientFragment extends Fragment {
                 1,
                 0.5,
                 30,
-                "sale;Casablanca", 0
-
+                "sale;Casablanca",
+                0
         );
         Offer offer2 = new Offer(
                 "villeDepart",
+                "LatitudeMapVilleDepart",
+                "LatitudeMapVilleDepart",
                 "adresseDepart",
                 "LatitudeMapAdresseDepart",
                 "LatitudeMapAdresseDepart",
@@ -127,6 +133,8 @@ public class ClientFragment extends Fragment {
         Offer offer3 = new Offer(
                 "villeDepart",
                 "adresseDepart",
+                "LatitudeMapVilleDepart",
+                "LatitudeMapVilleDepart",
                 "LatitudeMapAdresseDepart",
                 "LatitudeMapAdresseDepart",
                 "villeArriver",
@@ -149,6 +157,8 @@ public class ClientFragment extends Fragment {
 
         Offer offer4 = new Offer(
                 "villeDepart",
+                "LatitudeMapVilleDepart",
+                "LatitudeMapVilleDepart",
                 "adresseDepart",
                 "LatitudeMapAdresseDepart",
                 "LatitudeMapAdresseDepart",

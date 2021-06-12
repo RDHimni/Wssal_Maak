@@ -1,13 +1,11 @@
 package ridaz.wssalmaak.models;
 
 import androidx.room.Entity;
-import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-import java.io.Serializable;
 
 /**
  * Rida Dhimni
@@ -50,7 +48,6 @@ public class User {
     @SerializedName("BeardDate")
     @Expose
     private String BeardDate;
-
 
     @SerializedName("ProfilePhotoUrl")
     @Expose

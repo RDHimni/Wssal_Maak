@@ -57,6 +57,8 @@ public class VilleDepartFragment extends Fragment implements OnMapReadyCallback 
     private Address address;
 
     private String ville = "";
+    private String LatitudeMapVilleDepart = "";
+    private String LongitudeMapVilleDepart = "";
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -76,7 +78,14 @@ public class VilleDepartFragment extends Fragment implements OnMapReadyCallback 
 
                 if (!ville.isEmpty()) {
                     Bundle bundle = new Bundle();
-                    bundle.putString("ville", ville);
+                    LatitudeMapVilleDepart = String.valueOf(latLng.latitude);
+                    LongitudeMapVilleDepart =  String.valueOf(latLng.longitude);
+
+                    bundle.putString("villeDepart", ville);
+                    bundle.putString("LatitudeMapVilleDepart", LatitudeMapVilleDepart);
+                    bundle.putString("LongitudeMapVilleDepart", LongitudeMapVilleDepart);
+
+
                     Navigation.findNavController(view).navigate(R.id.action_villeDepartFragment_to_adresseDepartFragment,bundle);
 
                 }

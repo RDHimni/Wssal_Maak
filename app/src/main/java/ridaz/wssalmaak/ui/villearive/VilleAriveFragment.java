@@ -56,9 +56,16 @@ public class VilleAriveFragment extends Fragment implements OnMapReadyCallback {
     private Address address;
 
     private String ville = "";
-    private String villeDepart = "";
-    private String adresseDepart= "";
+    private String LatitudeMapVilleArrive = "";
+    private String LongitudeMapVilleArrive = "";
 
+    private String villeDepart = "";
+    private String LatitudeMapVilleDepart = "";
+    private String LongitudeMapVilleDepart = "";
+
+    private String adresseDepart= "";
+    private String LatitudeMapAdresseDepart = "";
+    private String LongitudeMapAdresseDepart = "";
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -70,6 +77,14 @@ public class VilleAriveFragment extends Fragment implements OnMapReadyCallback {
                 .findFragmentById(R.id.mapFragIVilleArive);
         mapFragment.getMapAsync(this);
 
+        villeDepart = getArguments().getString("villeDepart");
+        LatitudeMapVilleDepart = getArguments().getString("LatitudeMapVilleDepart");
+        LongitudeMapVilleDepart = getArguments().getString("LongitudeMapVilleDepart");
+
+        adresseDepart = getArguments().getString("adresseDepart");
+        LatitudeMapAdresseDepart = getArguments().getString("LatitudeMapAdresseDepart");
+        LongitudeMapAdresseDepart = getArguments().getString("LongitudeMapAdresseDepart");
+
         villeAriveAutocompletHandler();
         binding.SuivantBtnInVilleAriveFrag.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,9 +92,20 @@ public class VilleAriveFragment extends Fragment implements OnMapReadyCallback {
 
                 if (!ville.isEmpty()) {
                     Bundle bundle = new Bundle();
+                    LatitudeMapVilleArrive = String.valueOf(latLng.latitude);
+                    LongitudeMapVilleArrive = String.valueOf(latLng.longitude);
                     bundle.putString("villeDepart", villeDepart);
+                    bundle.putString("LatitudeMapVilleDepart", LatitudeMapVilleDepart);
+                    bundle.putString("LongitudeMapVilleDepart", LongitudeMapVilleDepart);
+
                     bundle.putString("adresseDepart", adresseDepart);
+                    bundle.putString("LatitudeMapAdresseDepart", LatitudeMapAdresseDepart);
+                    bundle.putString("LongitudeMapAdresseDepart", LongitudeMapAdresseDepart);
+
                     bundle.putString("villeArrive", ville);
+                    bundle.putString("LatitudeMapVilleArrive", LatitudeMapVilleArrive);
+                    bundle.putString("LongitudeMapVilleArrive", LongitudeMapVilleArrive);
+
                     Navigation.findNavController(view).navigate(R.id.action_villeAriveFragment_to_creeOfferFragment,bundle);
 
                 }

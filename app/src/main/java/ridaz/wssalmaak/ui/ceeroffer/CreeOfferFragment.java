@@ -72,11 +72,19 @@ public class CreeOfferFragment extends Fragment {
 
 
     private String villeDepart = "";
+    private String LatitudeMapVilleDepart = "";
+    private String LongitudeMapVilleDepart = "";
+
     private String adresseDepart = "";
+    private String LatitudeMapAdresseDepart = "";
+    private String LongitudeMapAdresseDepart = "";
+
     private String villeArrive = "";
+    private String LatitudeMapVilleArrive = "";
+    private String LongitudeMapVilleArrive = "";
+
     private String heureArive,heuredepart;
-    private String dateDepart;
-    private String dateArive;
+    private String dateDepart,dateArive;
     private String dateAndHeureDepart;
     private String dateAndHeureArive;
 
@@ -89,9 +97,16 @@ public class CreeOfferFragment extends Fragment {
         TimePicker();
 
         villeDepart = getArguments().getString("villeDepart");
-        adresseDepart = getArguments().getString("adresseDepart");
-        villeArrive = getArguments().getString("villeArrive");
+        LatitudeMapVilleDepart = getArguments().getString("LatitudeMapVilleDepart");
+        LongitudeMapVilleDepart = getArguments().getString("LongitudeMapVilleDepart");
 
+        adresseDepart = getArguments().getString("adresseDepart");
+        LatitudeMapAdresseDepart = getArguments().getString("LatitudeMapAdresseDepart");
+        LongitudeMapAdresseDepart = getArguments().getString("LongitudeMapAdresseDepart");
+
+        villeArrive = getArguments().getString("villeArrive");
+        LatitudeMapVilleArrive = getArguments().getString("LatitudeMapVilleArrive");
+        LongitudeMapVilleArrive = getArguments().getString("LongitudeMapVilleArrive");
 
         binding.SuivantBtnIncreeOffer.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -107,8 +122,17 @@ public class CreeOfferFragment extends Fragment {
 
                                 Bundle bundle = new Bundle();
                                 bundle.putString("villeDepart",villeDepart);
+                                bundle.putString("LatitudeMapVilleDepart", LatitudeMapVilleDepart);
+                                bundle.putString("LongitudeMapVilleDepart", LongitudeMapVilleDepart);
+
                                 bundle.putString("adresseDepart",adresseDepart);
+                                bundle.putString("LatitudeMapAdresseDepart", LatitudeMapAdresseDepart);
+                                bundle.putString("LongitudeMapAdresseDepart", LongitudeMapAdresseDepart);
+
                                 bundle.putString("villeArrive",villeArrive);
+                                bundle.putString("LatitudeMapVilleArrive", LatitudeMapVilleArrive);
+                                bundle.putString("LongitudeMapVilleArrive", LongitudeMapVilleArrive);
+
                                 bundle.putString("dateAndHeureDepart",dateAndHeureDepart);
                                 bundle.putString("dateAndHeureArrive",dateAndHeureArive);
 

@@ -54,6 +54,8 @@ public class MesOffesFragment extends Fragment {
 
         Offer offer = new Offer(
                 "villeDepart",
+                "LatitudeMapVilleDepart",
+                "LatitudeMapVilleDepart",
                 "adresseDepart",
                 "LatitudeMapAdresseDepart",
                 "LatitudeMapAdresseDepart",
@@ -75,6 +77,8 @@ public class MesOffesFragment extends Fragment {
         );
         Offer offer2 = new Offer(
                 "villeDepart",
+                "LatitudeMapVilleDepart",
+                "LatitudeMapVilleDepart",
                 "adresseDepart",
                 "LatitudeMapAdresseDepart",
                 "LatitudeMapAdresseDepart",
@@ -96,6 +100,8 @@ public class MesOffesFragment extends Fragment {
         );
         Offer offer3 = new Offer(
                 "villeDepart",
+                "LatitudeMapVilleDepart",
+                "LatitudeMapVilleDepart",
                 "adresseDepart",
                 "LatitudeMapAdresseDepart",
                 "LatitudeMapAdresseDepart",
@@ -119,6 +125,8 @@ public class MesOffesFragment extends Fragment {
 
         Offer offer4 = new Offer(
                 "villeDepart",
+                "LatitudeMapVilleDepart",
+                "LatitudeMapVilleDepart",
                 "adresseDepart",
                 "LatitudeMapAdresseDepart",
                 "LatitudeMapAdresseDepart",

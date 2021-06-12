@@ -11,6 +11,8 @@ public class Offer {
 
     private Integer OfferId;
     private String VilleDepart;
+    private String LatitudeMapVilleDepart;
+    private String LongitudeMapVilleDepart;
     private String AdresseDepart;
     private String LatitudeMapAdresseDepart;
     private String LongitudeMapAdresseDepart;
@@ -32,10 +34,10 @@ public class Offer {
 
     public Offer() {
     }
-
-
-    public Offer(String villeDepart, String adresseDepart, String latitudeMapAdresseDepart, String longitudeMapAdresseDepart, String villeArriver, String latitudeMapVilleArriver, String longitudeMapVilleArriver, String dateDepart, String dateArriver, String tempsDepart, String tempsArriver, String trajetParKm, ridaz.wssalmaak.models.Car car, User livreur, Integer status, double numberKilos, double prixParKilos, String stopeVilles, int paymentType) {
+    public Offer(String villeDepart, String latitudeMapVilleDepart, String longitudeMapVilleDepart, String adresseDepart, String latitudeMapAdresseDepart, String longitudeMapAdresseDepart, String villeArriver, String latitudeMapVilleArriver, String longitudeMapVilleArriver, String dateDepart, String dateArriver, String tempsDepart, String tempsArriver, String trajetParKm, ridaz.wssalmaak.models.Car car, User livreur, Integer status, double numberKilos, double prixParKilos, String stopeVilles, int paymentType) {
         VilleDepart = villeDepart;
+        LatitudeMapVilleDepart = latitudeMapVilleDepart;
+        LongitudeMapVilleDepart = longitudeMapVilleDepart;
         AdresseDepart = adresseDepart;
         LatitudeMapAdresseDepart = latitudeMapAdresseDepart;
         LongitudeMapAdresseDepart = longitudeMapAdresseDepart;
@@ -56,7 +58,6 @@ public class Offer {
         PaymentType = paymentType;
     }
 
-
     public Integer getOfferId() {
         return OfferId;
     }
@@ -71,6 +72,22 @@ public class Offer {
 
     public void setVilleDepart(String villeDepart) {
         VilleDepart = villeDepart;
+    }
+
+    public String getLatitudeMapVilleDepart() {
+        return LatitudeMapVilleDepart;
+    }
+
+    public void setLatitudeMapVilleDepart(String latitudeMapVilleDepart) {
+        LatitudeMapVilleDepart = latitudeMapVilleDepart;
+    }
+
+    public String getLongitudeMapVilleDepart() {
+        return LongitudeMapVilleDepart;
+    }
+
+    public void setLongitudeMapVilleDepart(String longitudeMapVilleDepart) {
+        LongitudeMapVilleDepart = longitudeMapVilleDepart;
     }
 
     public String getAdresseDepart() {
@@ -222,6 +239,8 @@ public class Offer {
         return "Offer{" +
                 "OfferId=" + OfferId +
                 ", VilleDepart='" + VilleDepart + '\'' +
+                ", LatitudeMapVilleDepart='" + LatitudeMapVilleDepart + '\'' +
+                ", LongitudeMapVilleDepart='" + LongitudeMapVilleDepart + '\'' +
                 ", AdresseDepart='" + AdresseDepart + '\'' +
                 ", LatitudeMapAdresseDepart='" + LatitudeMapAdresseDepart + '\'' +
                 ", LongitudeMapAdresseDepart='" + LongitudeMapAdresseDepart + '\'' +
